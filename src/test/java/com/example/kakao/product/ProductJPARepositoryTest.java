@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class ProductJPARepositoryTest extends DummyEntity {
 
     @Autowired
-    private TestEntityManager em;
+    private EntityManager em;
 
     @Autowired
     private ProductJPARepository productJPARepository;
