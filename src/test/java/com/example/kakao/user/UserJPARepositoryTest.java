@@ -1,6 +1,6 @@
 package com.example.kakao.user;
 
-import com.example.kakao._core.util.FakeStoreTest;
+import com.example.kakao._core.util.DummyEntity;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @DataJpaTest
-public class UserJPARepositoryTest extends FakeStoreTest {
+public class UserJPARepositoryTest extends DummyEntity {
 
     @Autowired
     private UserJPARepository userJPARepository;
@@ -44,4 +44,9 @@ public class UserJPARepositoryTest extends FakeStoreTest {
         Assertions.assertThat(userPS.getUsername()).isEqualTo("ssar");
         Assertions.assertThat(userPS.getRoles()).isEqualTo("ROLE_USER");
     }
+
+    @Test
+    public void save(){}
+
+
 }
